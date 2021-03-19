@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.userregistrationtest.UserRegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-19T12:09:03" hostname="LAPTOP-2B0EPGRS" time="0.044">
+  <properties/>
+  <testcase name="givenFirstName_WhenFirstNameHaveSpecialChar_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.044"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
