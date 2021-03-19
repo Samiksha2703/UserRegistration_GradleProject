@@ -32,14 +32,19 @@ public class UserRegistration {
 
     public boolean isPasswordValid(String password) {
         boolean upperCasePresent = false;
+        boolean numberPresent = false;
         char[] passwordArray = password.toCharArray();
 
         for (int index = 0; index < passwordArray.length; index++) {
             if (Character.isUpperCase(passwordArray[index])) {
                 upperCasePresent = true;
             }
+
+            if (Character.isDigit(passwordArray[index])) {
+                numberPresent = true;
+            }
         }
-        if (passwordArray.length >= 8 && upperCasePresent)
+        if (passwordArray.length >= 8 && upperCasePresent && numberPresent)
             return true;
             else
             return false;

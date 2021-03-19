@@ -169,5 +169,17 @@ public class UserRegistrationTest {
         Assertions.assertFalse(result);
     }
 
+    @Test
+    public void givenPassword_WhenPasswordHaveAtleast1Digit_ShouldReturn_true() {
+        boolean result = userregistration.isPasswordValid("Samiksha27");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void givenPassword_WhenPasswordDoNotHaveAtleast1Digit_ShouldReturn_false() {
+        boolean result = userregistration.isPasswordValid("samiksha");
+        Assertions.assertFalse(result);
+    }
+
 }
 
