@@ -31,8 +31,10 @@ public class UserRegistration {
     }
 
     public boolean isPasswordValid(String password) {
+        String specialChars = "~`!@#$%^&*()-_=+\\|[{]};:'\",<.>/?";
         boolean upperCasePresent = false;
         boolean numberPresent = false;
+        boolean specialCharsPresent = false;
         char[] passwordArray = password.toCharArray();
 
         for (int index = 0; index < passwordArray.length; index++) {
@@ -43,10 +45,14 @@ public class UserRegistration {
             if (Character.isDigit(passwordArray[index])) {
                 numberPresent = true;
             }
+
+            if (specialChars.contains(String.valueOf(passwordArray[index]))) {
+                specialCharsPresent = true;
+            }
         }
-        if (passwordArray.length >= 8 && upperCasePresent && numberPresent)
+        if (passwordArray.length >= 8 && upperCasePresent && numberPresent && specialCharsPresent)
             return true;
-            else
+        else
             return false;
     }
 

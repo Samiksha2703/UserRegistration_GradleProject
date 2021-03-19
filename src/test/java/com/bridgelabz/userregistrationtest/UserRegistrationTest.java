@@ -181,5 +181,16 @@ public class UserRegistrationTest {
         Assertions.assertFalse(result);
     }
 
+    @Test
+    public void givenPassword_WhenPasswordHaveAtleast1SpecialCharacter_ShouldReturn_true() {
+        boolean result = userregistration.isPasswordValid("Samiksha@27");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void givenPassword_WhenPasswordDoNotHaveAtleast1SpecialCharacter_ShouldReturn_false() {
+        boolean result = userregistration.isPasswordValid("samiksha27");
+        Assertions.assertFalse(result);
+    }
 }
 
