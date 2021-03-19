@@ -9,4 +9,10 @@ public class UserRegistration {
             return false;
     }
 
+    public boolean isLastNameValid(String firstName){
+        if (firstName.matches("^[A-Z]+[a-z]{2,}$"))
+            return true;
+        else
+            return false;
+    }
 }

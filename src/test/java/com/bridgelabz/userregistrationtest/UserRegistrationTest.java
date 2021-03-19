@@ -48,4 +48,47 @@ public class UserRegistrationTest {
         boolean result = userregistration.isFirstNameValid("samiksha@27");
         Assertions.assertFalse(result);
     }
+
+    @Test
+    public void givenLastName_WhenLastNameStartsWithCapitalLetter_ShouldReturn_True()
+    {
+        boolean result = userregistration.isLastNameValid("Shende");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void givenLastName_MustHaveMinThreeLetters_ShouldReturn_True()
+    {
+        boolean result = userregistration.isLastNameValid("She");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void givenLastName_HaveLessThanThreeLetters_ShouldReturn_False()
+    {
+        boolean result = userregistration.isLastNameValid("Sh");
+        Assertions.assertFalse(result);
+    }
+
+    @Test
+    public void givenLastName_WhenLastNameHaveAllLowerCase_ShouldReturn_false()
+    {
+        boolean result = userregistration.isLastNameValid("shende");
+        Assertions.assertFalse(result);
+    }
+
+    @Test
+    public void givenLastName_WhenLastNameHaveDigits_ShouldReturn_false()
+    {
+        boolean result = userregistration.isLastNameValid("Shende27");
+        Assertions.assertFalse(result);
+    }
+
+    @Test
+    public void givenLastName_WhenLastNameHaveSpecialChar_ShouldReturn_false()
+    {
+        boolean result = userregistration.isLastNameValid("Shende@27");
+        Assertions.assertFalse(result);
+    }
 }
+
