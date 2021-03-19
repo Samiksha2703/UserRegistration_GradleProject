@@ -31,9 +31,17 @@ public class UserRegistration {
     }
 
     public boolean isPasswordValid(String password) {
-        if (password.matches("^[a-zA-Z0-9]{8,}$"))
+        boolean upperCasePresent = false;
+        char[] passwordArray = password.toCharArray();
+
+        for (int index = 0; index < passwordArray.length; index++) {
+            if (Character.isUpperCase(passwordArray[index])) {
+                upperCasePresent = true;
+            }
+        }
+        if (passwordArray.length >= 8 && upperCasePresent)
             return true;
-        else
+            else
             return false;
     }
 

@@ -156,5 +156,18 @@ public class UserRegistrationTest {
         boolean result = userregistration.isPasswordValid("Sami");
         Assertions.assertFalse(result);
     }
+
+    @Test
+    public void givenPassword_WhenPasswordHaveAtleast1UpperCase_ShouldReturn_true() {
+        boolean result = userregistration.isPasswordValid("Samiksha27");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void givenPassword_WhenPasswordDoNotHaveAtleast1UpperCase_ShouldReturn_false() {
+        boolean result = userregistration.isPasswordValid("samiksh27");
+        Assertions.assertFalse(result);
+    }
+
 }
 
