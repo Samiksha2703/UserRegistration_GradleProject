@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.userregistrationtest.UserRegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-19T14:01:51" hostname="LAPTOP-2B0EPGRS" time="0.063">
+<testsuite name="com.bridgelabz.userregistrationtest.UserRegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-19T14:36:33" hostname="LAPTOP-2B0EPGRS" time="0.089">
   <properties/>
-  <testcase name="givenMobileNumber_WhenMobileNumberDoNotHaveSpace_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.063"/>
+  <testcase name="givenPassword_WhenPasswordHaveLessThan8Characters_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.089"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

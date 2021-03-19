@@ -30,4 +30,11 @@ public class UserRegistration {
             return false;
     }
 
+    public boolean isPasswordValid(String password) {
+        if (password.matches("^[a-zA-Z0-9]{8,}$"))
+            return true;
+        else
+            return false;
+    }
+
 }
