@@ -8,19 +8,19 @@ public class UserRegistrationTest {
     UserRegistration userregistration = new UserRegistration();
 
     @Test
-    public void givenFirstName_WhenFirstNameStartsWithCapitalLetter_ShouldReturn_True() {
+    public void givenFirstName_WhenFirstNameStartsWithCapitalLetter_ShouldReturn_true() {
         boolean result = userregistration.isFirstNameValid("Samiksha");
         Assertions.assertTrue(result);
     }
 
     @Test
-    public void givenFirstName_MustHaveMinThreeLetters_ShouldReturn_True() {
+    public void givenFirstName_MustHaveMinThreeLetters_ShouldReturn_true() {
         boolean result = userregistration.isFirstNameValid("Sam");
         Assertions.assertTrue(result);
     }
 
     @Test
-    public void givenFirstName_HaveLessThanThreeLetters_ShouldReturn_False() {
+    public void givenFirstName_HaveLessThanThreeLetters_ShouldReturn_false() {
         boolean result = userregistration.isFirstNameValid("Sa");
         Assertions.assertFalse(result);
     }
@@ -44,19 +44,19 @@ public class UserRegistrationTest {
     }
 
     @Test
-    public void givenLastName_WhenLastNameStartsWithCapitalLetter_ShouldReturn_True() {
+    public void givenLastName_WhenLastNameStartsWithCapitalLetter_ShouldReturn_false() {
         boolean result = userregistration.isLastNameValid("Shende");
         Assertions.assertTrue(result);
     }
 
     @Test
-    public void givenLastName_MustHaveMinThreeLetters_ShouldReturn_True() {
+    public void givenLastName_MustHaveMinThreeLetters_ShouldReturn_false() {
         boolean result = userregistration.isLastNameValid("She");
         Assertions.assertTrue(result);
     }
 
     @Test
-    public void givenLastName_HaveLessThanThreeLetters_ShouldReturn_False() {
+    public void givenLastName_HaveLessThanThreeLetters_ShouldReturn_false() {
         boolean result = userregistration.isLastNameValid("Sh");
         Assertions.assertFalse(result);
     }
@@ -86,13 +86,13 @@ public class UserRegistrationTest {
     }
 
     @Test
-    public void givenEmailId_WhenEmailIdDoNotHaveMandatoryPart2_ShouldReturn_True() {
+    public void givenEmailId_WhenEmailIdDoNotHaveMandatoryPart2_ShouldReturn_false() {
         boolean result = userregistration.isEmailIdValid("shende.samiksha@.com");
         Assertions.assertFalse(result);
     }
 
     @Test
-    public void givenEmailId_WhenEmailIdDoNotHaveMandatoryPart3_ShouldReturn_False() {
+    public void givenEmailId_WhenEmailIdDoNotHaveMandatoryPart3_ShouldReturn_false() {
         boolean result = userregistration.isEmailIdValid("consultant@miracleindia..in");
         Assertions.assertFalse(result);
     }
@@ -108,5 +108,42 @@ public class UserRegistrationTest {
         boolean result = userregistration.isEmailIdValid("abc.100@abc.co.au");
         Assertions.assertTrue(result);
     }
+
+    @Test
+    public void givenMobileNumber_WhenMobileNumberDoNotHaveSpace_ShouldReturn_false() {
+        boolean result = userregistration.isMobileNumberValid("917896532149");
+        Assertions.assertFalse(result);
+    }
+
+    @Test
+    public void givenMobileNumber_WhenMobileNumberDoNotHaveCountryCodeAndSpace_ShouldReturn_false() {
+        boolean result = userregistration.isMobileNumberValid("9185694878");
+        Assertions.assertFalse(result);
+    }
+
+    @Test
+    public void givenMobileNumber_WhenMobileNumberDoNotHave10Digit_ShouldReturn_false() {
+        boolean result = userregistration.isMobileNumberValid("91 869757936");
+        Assertions.assertFalse(result);
+    }
+
+    @Test
+    public void givenMobileNumber_WhenMobileNumberHaveAlphabates_ShouldReturn_false() {
+        boolean result = userregistration.isMobileNumberValid("91 456987105O");
+        Assertions.assertFalse(result);
+    }
+
+    @Test
+    public void givenMobileNumber_WhenMobileNumberHaveSpecialCharacter_ShouldReturn_false() {
+        boolean result = userregistration.isMobileNumberValid("91 698745@369");
+        Assertions.assertFalse(result);
+    }
+
+    @Test
+    public void givenMobileNumber_WhenMobileNumberIsProper_ShouldReturn_true() {
+        boolean result = userregistration.isMobileNumberValid("91 7865943589");
+        Assertions.assertTrue(result);
+    }
+
 }
 

@@ -23,4 +23,11 @@ public class UserRegistration {
             return false;
     }
 
+    public boolean isMobileNumberValid(String mobile) {
+        if (mobile.matches("^[0-9]{2}[ ][0-9]{10}$"))
+            return true;
+        else
+            return false;
+    }
+
 }
