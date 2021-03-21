@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.userregistrationtest.UserRegistrationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-03-19T16:04:58" hostname="LAPTOP-2B0EPGRS" time="0.131">
+<testsuite name="com.bridgelabz.userregistrationtest.UserRegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-21T09:10:28" hostname="LAPTOP-2B0EPGRS" time="0.055">
   <properties/>
-  <testcase name="givenPassword_WhenPasswordHaveAtleast1SpecialCharacter_ShouldReturn_true()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.1"/>
-  <testcase name="givenPassword_WhenPasswordDoNotHaveAtleast1SpecialCharacter_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.015"/>
+  <testcase name="WhenEntryNotSuccessfull_ShouldReturn_false()" classname="com.bridgelabz.userregistrationtest.UserRegistrationTest" time="0.055"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

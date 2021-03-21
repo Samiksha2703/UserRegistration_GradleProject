@@ -192,5 +192,20 @@ public class UserRegistrationTest {
         boolean result = userregistration.isPasswordValid("samiksha27");
         Assertions.assertFalse(result);
     }
-}
 
+    @Test
+    public void WhenEntrySuccessfull_ShouldReturn_true() {
+        boolean isValid = true;
+        String validateEntry = userregistration.isEntryValid(isValid);
+        Assertions.assertEquals("HAPPY", validateEntry);
+    }
+
+
+    @Test
+    public void WhenEntryNotSuccessfull_ShouldReturn_false() {
+        boolean isValid = false;
+        String validateEntry = userregistration.isEntryValid(isValid);
+        Assertions.assertEquals("SAD", validateEntry);
+    }
+
+}

@@ -2,14 +2,14 @@ package com.bridgelabz.userregistration;
 
 public class UserRegistration {
 
-    public boolean isFirstNameValid(String firstName){
+    public boolean isFirstNameValid(String firstName) {
         if (firstName.matches("^[A-Z]+[a-z]{2,}$"))
             return true;
         else
             return false;
     }
 
-    public boolean isLastNameValid(String firstName){
+    public boolean isLastNameValid(String firstName) {
         if (firstName.matches("^[A-Z]+[a-z]{2,}$"))
             return true;
         else
@@ -56,4 +56,12 @@ public class UserRegistration {
             return false;
     }
 
+    public String isEntryValid(boolean validate) {
+        if (validate){
+            return "HAPPY";
+        }
+        else {
+            return "SAD";
+        }
+    }
 }
